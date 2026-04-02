@@ -43,6 +43,13 @@
   font-kerning: auto;
 }
 
+:root {
+    --text-color: #4f2c1d;
+    --background-color: #e8ccac;
+    --link-color: #630011;
+    --link-hover-color: #3a4132;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -50,13 +57,13 @@ html {
 
 body {
     -webkit-font-smoothing: antialiased;
-    background: #fffff8;
-    color: #111;
+    background: var(--background-color);
+    color: var(--text-color);
     counter-reset: sidenote-counter;
     font: 1.4rem/2rem "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     height: 100%;
     margin: 0 auto;
-    max-width: 1440px;
+    max-width: 1400px;
     padding-left: 12.5%;
     padding-top: 5rem;
     width: 87.5%;
@@ -69,9 +76,9 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
     text-transform: capitalize;
 }
-h1 { font-size: 3.2rem; font-style: normal; margin-top: 2.6rem; }
-h2 { font-size: 2.2rem; margin-top: 4.2rem; }
-h3 { font-size: 1.7rem; margin-top: 2.6rem; }
+h1 { font-size: 3.2rem; font-style: normal; margin-top: 2.6rem; color:var( --link-color)}
+h2 { font-size: 2.2rem; margin-top: 4.2rem; color:var( --link-color)}
+h3 { font-size: 1.7rem; margin-top: 2.6rem; color:var( --text-color)}
 
 p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
     box-sizing: border-box;
@@ -89,10 +96,10 @@ p {
 }
 
 a,a:visited {
-    color: #111;
+    color: var(--link-color);
 
     &:hover {
-        color: rgb(220, 40, 40);
+        color: var(--link-hover-color);
     }
 }
 
@@ -117,7 +124,7 @@ figure {
 }
 
 hr {
-    background: #111;
+    background: var(--text-color);
     border: 0;
     height: 1px;
     margin: 4rem 0;
@@ -161,7 +168,7 @@ table {
     }
 
     thead th {
-        border-bottom: 1px solid #111;
+        border-bottom: 1px solid var(--text-color);
     }
 }
 
@@ -355,8 +362,8 @@ nav {
 }
 
 /* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    body{background:#191919;filter:invert(1);}
+/* @media (prefers-color-scheme: dark) {
+    body{background:#3e0000;filter:invert(1);}
     .highlight{border-color: grey !important;}
     img,iframe,.highlight,a:hover,a:focus{filter:invert(1);}
-}
+}*/
