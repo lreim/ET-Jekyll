@@ -325,6 +325,25 @@ figure {
     max-width: 900px;
 }
 
+.home-menu-grid {
+    margin: 4rem auto 0;
+    max-width: 980px;
+    position: relative;
+    left: calc(-12.5% / 2);
+    width: 100%;
+}
+
+.home-menu-card {
+    margin: 0 auto 2.5rem;
+    max-width: 900px;
+}
+
+.home-menu-card a,
+.home-menu-card a:visited {
+    display: block;
+    text-decoration: none;
+}
+
 .post-card a,
 .post-card a:visited {
     display: block;
@@ -452,6 +471,16 @@ nav {
     }
 
     .featured-posts-row .post-card {
+        max-width: 760px;
+    }
+
+    .home-menu-grid {
+        left: 0;
+        margin-top: 3rem;
+        max-width: 100%;
+    }
+
+    .home-menu-card {
         max-width: 760px;
     }
 
