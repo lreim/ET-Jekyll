@@ -11,9 +11,7 @@ Since I truly believe that books are unbelievably important — also for our per
 (I know, it’s hard sometimes; I still catch myself skipping reading time because of a lack of time... currently working on building better “book routine hygiene” ;)), 
 here it is:
                     
-<ul>
-    <li><em>Never Split the Difference</em>, by Chris Voss</li>
-    <li><em>Einsteins Schleier</em>, by Anton Zeilinger</li>
-    <li>Children’s books by Lucy and Stephen Hawking ;)</li>
-</ul>
+- **Never Split the Difference**, *by Chris Voss*
+- **Einsteins Schleier**, *by Anton Zeilinger*
+- **Children’s books**,  *by Lucy and Stephen Hawking ;)*
                 

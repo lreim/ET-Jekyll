@@ -1,0 +1,10 @@
+<article class="post-card">
+    <a href="{{ post.url | relative_url }}">
+        <div class="featured-post"{% if post.image %} style="background-image: url('{{ post.image | relative_url }}');"{% endif %}>
+            <h2><span>{{ post.title }}</span></h2>
+            {% if post.date %}
+                <p class="featured-post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+            {% endif %}
+        </div>
+    </a>
+</article>

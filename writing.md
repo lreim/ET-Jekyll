@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: articles
 excerpt_separator: <!--more-->
 title: peaks of my posts?
 description: Come along with me

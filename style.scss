@@ -69,6 +69,28 @@ body {
     width: 87.5%;
 }
 
+.content-column {
+    margin: 0 auto;
+    max-width: 860px;
+    padding-bottom: 4rem;
+    width: 100%;
+    position: relative;
+    left: calc(-12.5% / 2);
+}
+
+main > article {
+    margin: 0 auto;
+    max-width: 860px;
+    padding-bottom: 4rem;
+    position: relative;
+    width: 100%;
+    left: calc(-12.5% / 2);
+}
+
+.header-row {
+    width: 100%;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-style: italic;
     font-weight: normal;
@@ -82,10 +104,10 @@ h3 { font-size: 1.7rem; margin-top: 2.6rem; color:var( --text-color)}
 
 p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
     box-sizing: border-box;
-    max-width: 55%;
+    max-width: 100%;
 }
 .MathJax_SVG_Display {
-    max-width: 55% !important;
+    max-width: 100% !important;
 }
 li ul li, li ol li {
     max-width: 100%;
@@ -144,8 +166,29 @@ code {
 
 img {
     height: auto;
-    margin-right: 4rem;
+    margin-right: 0;
     width: 100%;
+}
+
+.content-column img,
+.content-column video,
+main > article img,
+main > article video {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 0.5rem;
+    box-shadow: 0 18px 36px rgba(79, 44, 29, 0.16);
+    display: block;
+    left: 50%;
+    margin: 2rem 0;
+    max-width: min(960px, calc(100% + 140px));
+    position: relative;
+    transform: translateX(-50%);
+    width: min(960px, calc(100% + 140px));
+}
+
+.content-column video,
+main > article video {
+    height: auto;
 }
 
 /**************************************
@@ -197,13 +240,13 @@ table {
 /*span*/.sidenote,
 figcaption {
     font-size: 80%;
-    left: calc(100% + 4rem);
+    left: auto;
     line-height: 1.3rem;
-    max-width: 400px;
+    max-width: 100%;
     padding-top: 1rem;
-    position: absolute;
-    top: 0;
-    width: 50%;
+    position: relative;
+    top: auto;
+    width: 100%;
 }
 
 /*span*/.sidenote {
@@ -265,6 +308,77 @@ figure {
     margin: 6rem 0;
 }
 
+.post-card {
+    margin: 2rem auto 3rem;
+    max-width: 760px;
+}
+
+.featured-posts-row {
+    margin: 0 auto;
+    max-width: 980px;
+    position: relative;
+    left: calc(-12.5% / 2);
+    width: 100%;
+}
+
+.featured-posts-row .post-card {
+    max-width: 900px;
+}
+
+.post-card a,
+.post-card a:visited {
+    display: block;
+    text-decoration: none;
+}
+
+.featured-post {
+    align-items: flex-end;
+    background-color: rgba(79, 44, 29, 0.15);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 22rem;
+    overflow: hidden;
+    padding: 1.5rem;
+    position: relative;
+    width: 100%;
+}
+
+.featured-post::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.08));
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.featured-post h2,
+.featured-post .featured-post-meta {
+    position: relative;
+    z-index: 1;
+}
+
+.featured-post h2 {
+    margin: 0;
+    width: 100%;
+}
+
+.featured-post h2 span {
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+}
+
+.featured-post-meta {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0.75rem 0 0;
+}
+
 /**************************************
     $NAVIGATION
 /**************************************/
@@ -320,6 +434,36 @@ nav {
 
     .MathJax_SVG_Display {
         max-width: 100% !important;
+    }
+
+    .content-column {
+        left: 0;
+        padding-bottom: 3rem;
+    }
+
+    main > article {
+        left: 0;
+        padding-bottom: 3rem;
+    }
+
+    .featured-posts-row {
+        left: 0;
+        max-width: 100%;
+    }
+
+    .featured-posts-row .post-card {
+        max-width: 760px;
+    }
+
+    .content-column img,
+    .content-column video,
+    main > article img,
+    main > article video {
+        left: 0;
+        margin: 1.5rem 0;
+        max-width: 100%;
+        transform: none;
+        width: 100%;
     }
 
     nav {
